@@ -60,6 +60,7 @@ Route::post('/edit-service/{id}', [ServiceController::class, 'update']);
 //projects
 Route::post('/add-projects', [ProjectController::class, 'store']);
 Route::get('/get-projects', [ProjectController::class, 'index']);
+Route::get('/get-projects/{id}', [ProjectController::class, 'show']);
 Route::delete('/del-projects/{id}', [ProjectController::class, 'destroy']);
 Route::post('/edit-projects/{id}', [ProjectController::class, 'update']);
 

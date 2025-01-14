@@ -126,4 +126,26 @@ class ProjectController extends Controller
             ], 200);
         }
 
+
+        public function show($id)
+{
+    // Find the project by ID
+    $project = ProjectModel::find($id);
+
+    // Check if the project exists
+    if (!$project) {
+        return response()->json([
+            'message' => 'Project not found.',
+            'data'    => null,
+        ], 404);
+    }
+
+    // Return the project data
+    return response()->json([
+        'message' => 'Project fetched successfully!',
+        'data'    => $project,
+    ], 200);
+}
+
+
 }
