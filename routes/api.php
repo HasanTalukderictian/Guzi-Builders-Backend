@@ -33,9 +33,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/students', [StudentController::class, 'store']);
 
+
+// Blog
+
+
 Route::post('/blogs', [ControllerBlog::class, 'store']);
 Route::get('/get-blogs', [ControllerBlog::class, 'index']);
 
+Route::get('/get-blog/{id}', [ControllerBlog::class, 'show']);
 Route::delete('/delete-blog/{id}', [ControllerBlog::class, 'destroy']);
 
 Route::post('/edit-blog/{id}', [ControllerBlog::class, 'update']);
