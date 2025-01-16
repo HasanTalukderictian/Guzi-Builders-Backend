@@ -52,6 +52,7 @@ Route::post('/edit-about/{id}', [AboutController::class, 'update']);
 //service
 Route::post('/add-service', [ServiceController::class, 'store']);
 Route::get('/get-service', [ServiceController::class, 'index']);
+Route::get('/get-service/{id}', [ServiceController::class, 'show']);
 Route::delete('/del-service/{id}', [ServiceController::class, 'destroy']);
 Route::post('/edit-service/{id}', [ServiceController::class, 'update']);
 

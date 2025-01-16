@@ -121,4 +121,27 @@ class ServiceController extends Controller
     }
 
 
+    public function show($id)
+{
+    // Find the service by ID
+    $service = ServiceModel::find($id);
+
+    // Check if the service exists
+    if (!$service) {
+        return response()->json([
+            'error' => 'Service not found!',
+        ], 404);
+    }
+
+    // Return the service data
+    return response()->json([
+        'message' => 'Service fetched successfully!',
+        'data'    => $service,
+    ], 200);
+}
+
+
+
+
+
 }
