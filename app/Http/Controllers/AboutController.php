@@ -23,7 +23,7 @@ class AboutController extends Controller
     $validatedData = $request->validate([
         'heading' => 'required|string|max:255',
         'description' => 'required|string',
-        'imageUrl' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',  // Adjust image validation as needed
+        'imageUrl' => 'nullable|image|mimes:jpeg,png,jpg,gif',  // Adjust image validation as needed
     ]);
 
     // Handle image upload if provided

@@ -46,6 +46,12 @@ Route::delete('/delete-blog/{id}', [ControllerBlog::class, 'destroy']);
 Route::post('/edit-blog/{id}', [ControllerBlog::class, 'update']);
 
 
+// contact
+
+Route::get('/get-contact', [ContactController::class, 'index']);
+
+
+
 // About
 
 Route::post('/add-about', [AboutController::class, 'store']);
@@ -89,6 +95,7 @@ Route::post('/edit-team/{id}', [TeamController::class, 'update']);
 Route::post('/contact', [ContactController::class, 'store']);
 
 Route::get('/students', [StudentController::class, 'hello']);
+
 
 
 

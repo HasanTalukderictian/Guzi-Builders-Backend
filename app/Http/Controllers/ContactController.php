@@ -40,4 +40,16 @@ class ContactController extends Controller
 }
 
 
+public function index()
+{
+    // Fetch all blogs from the database
+    $contact = ContactModel::orderBy('id', 'desc')->get();
+
+    // Return a success response with the blogs data
+    return response()->json([
+        'message' => 'Conact Message fetched successfully!',
+        'data'    => $contact
+    ], 200);
+}
+
 }
