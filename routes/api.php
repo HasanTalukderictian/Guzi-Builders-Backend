@@ -12,6 +12,7 @@ use App\Http\Controllers\TestominalController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminDashController;
+use App\Http\Controllers\EmployeeController;
 
 
 
@@ -82,6 +83,19 @@ Route::post('/add-testominal', [TestominalController::class, 'store']);
 Route::get('/get-testominal', [TestominalController::class, 'index']);
 Route::delete('/del-testominal/{id}', [TestominalController::class, 'destroy']);
 Route::post('/edit-testominal/{id}', [TestominalController::class, 'update']);
+
+
+//employee
+Route::post('/add-employee', [EmployeeController::class, 'store']);
+Route::get('/get-employee', [EmployeeController::class, 'index']);
+Route::get('/get-employee/{employee_id}', [EmployeeController::class, 'index']);
+Route::get('/get-employee/{employee_name}', [EmployeeController::class, 'index']);
+Route::post('/get-filterEmployees', [EmployeeController::class, 'filterEmployees']);
+Route::delete('/del-employee/{id}', [EmployeeController::class, 'destroy']);
+Route::post('/edit-employee/{id}', [EmployeeController::class, 'update']);
+Route::get('/view-employee/{id}', [EmployeeController::class, 'show']);
+
+
 
 
 //team

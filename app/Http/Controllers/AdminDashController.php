@@ -9,6 +9,7 @@ use App\Models\ProjectModel;
 use App\Models\Testominal;
 use App\Models\Team;
 use App\Models\ContactModel;
+use App\Models\Employee;
 
 class AdminDashController extends Controller
 {
@@ -21,6 +22,7 @@ class AdminDashController extends Controller
         $testimonials = Testominal::all();
         $teams = Team::all();
         $contact= ContactModel::all();
+        $employee= Employee::all();
 
         // Return the data as a JSON response
         return response()->json([
@@ -29,7 +31,8 @@ class AdminDashController extends Controller
             'projects' => $projects,
             'testimonials' => $testimonials,
             'teams' => $teams,
-            'contact' =>$contact
+            'contact' =>$contact,
+            'employee' =>$employee
         ]);
     }
 
