@@ -255,6 +255,16 @@ public function show($id)
     ]);
 }
 
+public function destroy($id)
+{
+    $employee = Employee::find($id);
+    if (!$employee) {
+        return response()->json(['message' => 'Employee not found'], 404);
+    }
+
+    $employee->delete();
+    return response()->json(['message' => 'Employee deleted successfully']);
+}
 
 
 
