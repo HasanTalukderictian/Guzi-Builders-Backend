@@ -13,6 +13,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminDashController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UserInfoController;
 
 
 
@@ -52,6 +53,13 @@ Route::post('/edit-blog/{id}', [ControllerBlog::class, 'update']);
 Route::get('/get-contact', [ContactController::class, 'index']);
 
 
+
+
+
+// User_info
+
+Route::post('/add-userInfo', [UserInfoController::class, 'store']);
+Route::get('/get-userInfo', [UserInfoController::class, 'index']);
 
 // About
 
