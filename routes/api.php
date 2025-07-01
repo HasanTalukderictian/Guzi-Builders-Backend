@@ -96,7 +96,7 @@ Route::post('/edit-testominal/{id}', [TestominalController::class, 'update']);
 //employee
 Route::post('/add-employee', [EmployeeController::class, 'store']);
 Route::get('/get-employee', [EmployeeController::class, 'index']);
-Route::get('/get-employee/{employee_id}', [EmployeeController::class, 'index']);
+Route::get('/get-employee/{employee_id}', [EmployeeController::class, 'show']);
 Route::get('/get-employee/{employee_name}', [EmployeeController::class, 'index']);
 Route::post('/get-filterEmployees', [EmployeeController::class, 'filterEmployees']);
 Route::delete('/del-employee/{id}', [EmployeeController::class, 'destroy']);
