@@ -13,6 +13,8 @@ class AboutController extends Controller
 
     public function store(Request $request)
 {
+
+
     // Check if there's already a record in the database
     $existingBlog = AboutModel::first(); // Check if any record exists
 
