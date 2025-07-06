@@ -60,6 +60,8 @@ Route::get('/get-contact', [ContactController::class, 'index']);
 
 Route::post('/add-userInfo', [UserInfoController::class, 'store']);
 Route::get('/get-userInfo', [UserInfoController::class, 'index']);
+Route::post('/edit-userInfo/{id}', [UserInfoController::class, 'update']);
+
 
 // About
 
